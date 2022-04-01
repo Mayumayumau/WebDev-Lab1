@@ -2,4 +2,4 @@ stack: python 3
 install:
  - pip3 install flask
 build_script:
- - py ./flaskapp/some_app.py
+ - py -3 ./flaskapp/some_app.py
