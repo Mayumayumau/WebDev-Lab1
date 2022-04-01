@@ -1,4 +1,4 @@
-language: python
+stack: python 3
 install:
  - pip3 install flask
 script:
