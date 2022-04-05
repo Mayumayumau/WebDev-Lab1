@@ -36,8 +36,8 @@ SECRET_KEY = 'secret'
 
 # captcha
 app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = 'сюда поместить ключ из google'
-app.config['RECAPTCHA_PRIVATE_KEY'] = 'сюда поместить секретный ключ из google'
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6LcRZUkfAAAAAMC2w8n8lPX-8_dHhgAs9vaVGLGw'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6LcRZUkfAAAAAN-2opKl6_A1s4Ugr8ANEEPCyvpC'
 app.config['RECAPTCHA_OPTIONS'] = {'theme':'white'}
 
 bootstrap = Bootstrap(app)
