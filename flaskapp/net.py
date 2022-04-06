@@ -4,8 +4,10 @@ import keras
 from keras.layers import Input
 from keras.models import Model
 from keras.applications.resnet import preprocess_input, decode_predictions
+from keras.applications.resnet import ResNet50
+from keras.applications.resnet_v2 import ResNet50V2
 # import keras_applications.resnet_v2 as resnet2
-from keras.applications import resnet_v2
+# from keras.applications import resnet_v2
 import os
 from PIL import Image
 import numpy as np
@@ -23,8 +25,10 @@ nw = 224
 ncol = 3
 
 visible2 = Input(shape=(nh,nw,ncol), name='imginp')
-resnet = resnet_v2.ResNet50V2(include_top=True, weights='imagenet', input_tensor=visible2,
+resnet = ResNet50V2(include_top=True, weights='imagenet', input_tensor=visible2,
                                                  input_shape=None, pooling = None, classes=1000)
+
+
 def read_image_files(files_max_count, dir_name):
     files = os.listdir(dir_name)
     files_count = files_max_count

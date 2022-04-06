@@ -43,7 +43,7 @@ app.config['RECAPTCHA_OPTIONS'] = {'theme':'white'}
 bootstrap = Bootstrap(app)
 
 class NetForm(FlaskForm):
-    openid = StringField('openid', validators=[DataRequired])
+    openid = StringField('openid', validators=[DataRequired()])
     upload = FileField('Load image', validators=[FileRequired(), FileAllowed(['jpg', 'png', 'jpeg'], 'Images only!')])
     recaptcha = RecaptchaField()
     submit = SubmitField('send')
