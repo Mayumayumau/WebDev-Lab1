@@ -3,7 +3,7 @@
 
 {% block title %} This is a page {% endblock %}
 
-{% blockcontent %}
+{% block content %}
 {{ wtf.quick_form(form, method='post', enctype='multipart/form-data', action='net' }}
 
 <h2>Classes:</h2>
