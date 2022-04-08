@@ -1,13 +1,9 @@
 import random
 import keras
-import keras
 from keras.layers import Input
-from keras.models import Model
 from keras.applications.resnet import preprocess_input, decode_predictions
-from keras.applications.resnet import ResNet50
 from keras.applications.resnet_v2 import ResNet50V2
-# import keras_applications.resnet_v2 as resnet2
-# from keras.applications import resnet_v2
+
 import os
 from PIL import Image
 import numpy as np
@@ -50,4 +46,7 @@ def getresult(image_box):
     out_net = resnet.predict(images_resized)
     decode = decode_predictions(out_net, top=1)
     return decode
+
+fcount, fimage = read_image_files(1, "./static")
+decode = getresult(fimage)
 
