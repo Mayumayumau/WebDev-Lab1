@@ -1,5 +1,3 @@
-import random
-import keras
 from keras.layers import Input
 from keras.applications.resnet import preprocess_input, decode_predictions
 from keras.applications.resnet_v2 import ResNet50V2
